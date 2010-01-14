@@ -1,0 +1,171 @@
+
+
+TABLE.displaytag {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px; 
+	width: 100%;
+	background: #e9e9e9;	
+}
+
+TABLE.displaytag TH {
+	background-image: url('../images/thead2.png'); 
+	background-repeat: repeat-x;
+	color: #462F6B;
+	text-align: center;
+	height: 25px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	border: 0;
+}
+
+TABLE.displaytag TD {
+
+	vertical-align: middle; 
+	height: auto;
+	color: #889CC1;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+TABLE.displaytag TR.odd TD {
+	background-color: #fff;
+}
+
+TABLE.displaytag TR.odd INPUT {
+	border: solid 0px white;
+	width: 100%;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+TABLE.displaytag TR.even INPUT {
+	border: solid 0px white;
+	width: 100%;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+TABLE.displaytag TFOOT {
+	background-image: url('../images/thead2.png'); 
+	background-repeat: repeat-x;
+	height: 31px;
+}
+
+TABLE.displaytag TFOOT INPUT {
+	background-image: url('../images/thead2.png'); 
+	background-repeat: repeat-x;
+}
+
+TFOOT input{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size: 10px;
+height: 25px;
+width: 55px;
+float: right;
+margin-left: 10px;
+margin-top: 4px;
+margin-bottom: 4px;
+}
+
+TABLE.displaytag TR.even TD {
+	background-color: #F7F7F7;
+}
+
+TABLE.displaytag TH.sorted {
+	background-color: #f9e375;
+}
+
+TABLE.displaytag TH.sorted a,
+TABLE.displaytag TH.sortable a {
+	display: block;
+	background: url(../images/arrow_off.png) no-repeat right;
+	color: #000;
+	text-decoration: none;
+}
+
+TABLE.displaytag TH.sorted a:hover,
+TABLE.displaytag TH.sortable a:hover {
+	color: #f00;
+}
+
+TABLE.displaytag TH.order1 a {
+	background-image: url(../images/arrow_down.png);
+	color: #B9B0C5;
+}
+
+TABLE.displaytag TH.order2 a {
+	background-image: url(../images/arrow_up.png);
+	color: #B9B0C5;
+}
+
+span.pagebanner {
+	background-color: #F7F7F7;
+	border: 1px solid #e9e9e9;
+	padding: 2px 4px 2px 4px;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	display:block;
+	border-bottom: none;
+	text-align: left;
+}
+
+span.pagelinks {
+	background-color: #F7F7F7;
+	border: 1px solid #e9e9e9;
+	padding: 2px 4px 2px 4px;
+	width: 100%;
+	display:block;
+	border-top: none;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+span.pagelinks a {
+	color: #889CC1;
+}
+
+span.pagelinks a:hover {
+	color: #f00;
+}
+
+div.exportlinks {
+	text-align: right;
+	width: 100%; 
+	background-image: url('../images/thead2.png'); 
+	background-repeat: repeat-x;
+	border: 1px solid #e9e9e9;
+	padding-top: 2px;
+}
+
+span.export {
+	display: inline;
+	cursor: pointer;
+	height: 20px;
+}
+
+span.excel {
+	background: url("../images/csv.png") no-repeat;
+	width: 30px;
+}
+span.csv {
+	background: url("../images/csv.png") no-repeat;
+	width: 30px;
+}
+span.xml {
+	background: url("../images/xml.png") no-repeat;
+	width: 30px;
+}
+span.pdf {
+	background: url("../images/pdf.png") no-repeat;
+	width: 30px;
+}
+span.rtf {
+	background: url("../images/rtf.png") no-repeat;
+	width: 30px;
+}
+
+

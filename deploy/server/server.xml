@@ -1,0 +1,63 @@
+
+<Server port="8005" shutdown="SHUTDOWN">
+
+  <!--APR library loader. Documentation at /docs/apr.html -->
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <!--Initialize Jasper prior to webapps are loaded. Documentation at /docs/jasper-howto.html -->
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <!-- JMX Support for the Tomcat server. Documentation at /docs/non-existent.html -->
+  <Listener className="org.apache.catalina.mbeans.ServerLifecycleListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+
+  
+  <GlobalNamingResources>
+
+  <!--
+   <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" /> -->
+  </GlobalNamingResources>
+
+
+  <Service name="Catalina">
+      
+    <Connector port="8080" protocol="HTTP/1.1" 
+               connectionTimeout="20000" 
+               redirectPort="8443"
+		   enableLookups="false" 
+		   disableUploadTimeout="true"
+		   compression="on"
+               compressionMinSize="2048"
+               noCompressionUserAgents="gozilla, traviata"
+               compressableMimeType="text/html,text/xml,text/javascript,application/x-javascript,application/javascript,application/pdf,application/rtf,application/vnd.ms-excel"
+    />
+    
+
+    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
+
+    <Engine name="Catalina" defaultHost="localhost">
+
+	<Realm 
+		className="org.apache.catalina.realm.DataSourceRealm" debug="0"
+   		dataSourceName="jdbc/pool" localDataSource="true"
+   		userTable="tomcat_users" userNameCol="login" userCredCol="senha"
+   		userRoleTable="tomcat_roles" roleNameCol="role"
+		digest="SHA" />
+
+
+      <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true" xmlValidation="false" xmlNamespaceAware="false" >
+		
+		<!--
+		<Context path="/sif" debug="0" reloadable="true" docBase="C:\Documents and Settings\user\workspace\WebFactory\web" workDir="C:\Documents and Settings\user\workspace\WebFactory\work" />
+      	
+		
+		<Context path="/webfactory" reloadable="true" docBase="C:\Documents and Settings\user\workspace\WebFactory\web" workDir="C:\Documents and Settings\user\workspace\WebFactory\work" />
+		-->
+
+	</Host>
+    
+	</Engine>
+  </Service>
+</Server>
